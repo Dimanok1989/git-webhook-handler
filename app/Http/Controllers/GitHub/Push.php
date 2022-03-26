@@ -36,7 +36,7 @@ class Push
             'driver' => 'daily',
             'path' => storage_path('logs/repo-push/push.log'),
             'level' => env('LOG_LEVEL', 'debug'),
-            'days' => 90,
+            'days' => 365,
         ])->info("Запрос обработки хука $repo", $data);
 
         if (!$path = $this->productions[$repo] ?? null)
